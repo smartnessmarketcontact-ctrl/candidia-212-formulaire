@@ -162,7 +162,7 @@ var L=e.id=="svg"||e.id=="pkg"||!e.firstElementChild||!e.firstElementChild.match
 if(!v||!L&&!v)return;if(e.id=="pkg"&&!v)return;o.push((L?L+" : ":"")+v)});return o.join("\n")}
 function recap(){var e=est(),ids=sel(),n=ids.map(function(i){var a=SV.concat(PK).filter(function(x){return x[0]==i})[0];return a?a[1]:i=="trad"?"Traduction d’un autre document":"Autre demande"});
 return`<p><b>Services choisis :</b><br>${n.join("<br>")}</p><div class="est">Estimation indicative<br><b>${e.t} DH</b>${e.x?" (express inclus)":""}${e.tbc.length?`<br><small>+ ${e.tbc.join(", ")} : tarif à confirmer</small>`:""}${e.ac?`<br><small>Acompte de 50 % à la commande : ${Math.round(e.t/2)} DH</small>`:""}<br><small>Estimation basée sur le catalogue ; CANDIDIA 212 confirme le prix et la faisabilité avant toute commande.</small></div><details><summary>Voir toutes mes réponses</summary><pre>${collect().replace(/</g,"&lt;")}</pre></details>`}
-var KEY="COLLEZ_VOTRE_CLE_ICI";
+var KEY="f7f1642e-c1e6-4dae-8300-55ede44ffc94";
 function cpy(btn,txt){var ok=function(){btn.textContent="Dossier copié ✓"};
 try{navigator.clipboard.writeText(txt).then(ok,function(){fb()})}catch(x){fb()}function fb(){var t=document.createElement("textarea");t.value=txt;document.body.appendChild(t);t.select();try{document.execCommand("copy");ok()}catch(x){btn.textContent="Sélectionnez le texte ci-dessous"}t.remove()}}
 function finish(){var r="CAND-"+new Date().toISOString().slice(2,10).replace(/-/g,"")+"-"+Math.random().toString(36).slice(2,6).toUpperCase(),e=est(),
