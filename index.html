@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CANDIDIA 212 – Formulaire client</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+:root{--nv:#05213f;--or:#ff7a2e;--bg:#f1f5fa;--cd:#fff;--tx:#14233a;--mu:#5d6b80;--bd:#d5dde8;--er:#c0392b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1626;--cd:#102440;--tx:#e8eef7;--mu:#9fb0c7;--bd:#27406290;--er:#ff8a7a}}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 Lato,"Segoe UI",system-ui,-apple-system,Arial,sans-serif}
+header{background:var(--nv);border-bottom:5px solid var(--or);color:#fff;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.lg{display:flex;align-items:center;gap:10px;font-size:28px;font-weight:700;letter-spacing:-.5px}.lg svg{width:36px;height:36px}
+header small{opacity:.85;font-size:13px;text-align:right}
+main{max-width:760px;margin:0 auto;padding:18px 14px 90px}
+h1{font-size:26px;line-height:1.2;margin:8px 0 4px}h2{font-size:22px;margin:0 0 4px}h3{font-size:18px;margin:0 0 10px;color:var(--or)}h4{margin:16px 0 8px;font-size:15px}
+.lead{color:var(--mu);margin:0 0 18px}
+#pg{display:flex;gap:6px;margin:16px 0 6px}#pg i{flex:1;height:7px;border-radius:4px;background:var(--bd)}#pg i.d{background:var(--nv)}#pg i.c{background:var(--or)}
+#pl{font-size:14px;color:var(--mu);margin-bottom:12px;display:flex;justify-content:space-between}
+.step{display:none;background:var(--cd);border:1px solid var(--bd);border-radius:16px;padding:22px 18px}.step.cur{display:block}
+.f{margin:0 0 16px}.f>label{display:block;font-weight:700;margin-bottom:5px;font-size:15px}
+input[type=text],input[type=email],input[type=tel],input[type=date],input[type=number],input[type=url],select,textarea{width:100%;font:inherit;color:var(--tx);background:var(--cd);border:1.5px solid var(--bd);border-radius:10px;padding:12px;min-height:46px}
+textarea{min-height:96px;resize:vertical}
+input:focus,select:focus,textarea:focus,button:focus-visible,.o:focus-within{outline:3px solid var(--or);outline-offset:1px}
+.f.bad input,.f.bad select,.f.bad textarea{border-color:var(--er)}.er{display:block;color:var(--er);font-size:13px;min-height:0}
+.ph{display:grid;grid-template-columns:120px 1fr;gap:8px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+.opts{display:grid;gap:8px}
+.o{display:flex;gap:10px;align-items:flex-start;border:1.5px solid var(--bd);border-radius:12px;padding:11px 12px;cursor:pointer}
+.o input{margin-top:4px;accent-color:var(--or);width:18px;height:18px;flex:none}
+.o b{display:block}.o span{font-size:13.5px;color:var(--mu)}.o em{font-style:normal;color:var(--or);font-weight:700;white-space:nowrap}
+.o:has(input:checked){border-color:var(--or);background:rgba(255,122,46,.1)}
+.pk{background:var(--nv);color:#fff;border-color:var(--or)}.pk span{color:#c5d3e6}.pk:has(input:checked){background:#0a3566}
+.tag{font-size:12.5px;background:var(--or);color:#05213f;border-radius:20px;padding:2px 10px;font-weight:700;margin-left:6px}
+.note{background:rgba(255,122,46,.12);border-left:4px solid var(--or);border-radius:8px;padding:10px 12px;font-size:14px;margin:0 0 16px}
+.sec{border-top:2px solid var(--bd);padding-top:16px;margin-top:20px}
+.blk{border:1.5px dashed var(--bd);border-radius:12px;padding:6px 14px;margin-bottom:12px}
+.nav{display:flex;justify-content:space-between;gap:10px;margin-top:22px}
+button{font:inherit;font-weight:700;border:0;border-radius:12px;padding:13px 22px;cursor:pointer;min-height:48px}
+.bp{background:var(--or);color:#05213f}.bs{background:transparent;border:1.5px solid var(--bd);color:var(--tx)}.bl{background:transparent;color:var(--or);border:1.5px dashed var(--or);padding:9px 14px;min-height:40px}
+pre{white-space:pre-wrap;word-break:break-word;background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:12px;font:13px/1.5 ui-monospace,Consolas,monospace;max-height:340px;overflow:auto}
+.est{background:var(--nv);color:#fff;border-radius:14px;padding:16px;margin:14px 0}.est b{font-size:26px;color:var(--or)}
+.ok{text-align:center}.ok .ck{width:84px;height:84px;border-radius:50%;background:var(--or);color:#05213f;font-size:46px;display:grid;place-items:center;margin:6px auto 14px}
+.ok .nav{flex-direction:column}.ok a{text-decoration:none;text-align:center;display:block}
+footer{text-align:center;color:var(--mu);font-size:13px;padding:0 14px 30px}
+@media(max-width:560px){.g2{grid-template-columns:1fr}.ph{grid-template-columns:105px 1fr}header small{display:none}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="lg"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M33 12A15 15 0 1 0 33 28"/><path d="M13 21l6 6 13-16" stroke="#ff7a2e"/></svg>Candidia</div><small>Candidia 212<br>Formulaire client</small></header>
+<main>
+<h1>Votre dossier client</h1>
+<p class="lead">Quelques minutes suffisent. Vos réponses sont enregistrées automatiquement sur cet appareil : vous pouvez revenir plus tard.</p>
+<div id="pg"></div><div id="pl"><span id="pt"></span><span id="pc2"></span></div>
+<form id="form" novalidate autocomplete="on"></form>
+</main>
+<footer>Candidia 212 · WhatsApp : +212 6 63 20 73 15 · Instagram et TikTok : @candidia212<br>Vos documents et informations personnelles ne sont jamais partagés.</footer>
+<script>
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return[].slice.call((r||document).querySelectorAll(s))};
+var P="s",N=0,WA="212663207315",ST=["Vos informations","Services","Votre projet","Détails par service","Récapitulatif"];
+function nid(x){return x||(P+(N++))}
+function T(l,ph,ty,rq,w,x){var i=nid(x);return `<div class="f ${w||""}"><label for="${i}">${l}${rq?" *":""}</label><input id="${i}" type="${ty||"text"}" placeholder="${ph||""}" ${rq?"data-r=1":""}><span class="er"></span></div>`}
+function A(l,ph,rq,x){var i=nid(x);return `<div class="f"><label for="${i}">${l}${rq?" *":""}</label><textarea id="${i}" placeholder="${ph||""}" ${rq?"data-r=1":""}></textarea><span class="er"></span></div>`}
+function S(l,o,rq,x){var i=nid(x);return `<div class="f"><label for="${i}">${l}${rq?" *":""}</label><select id="${i}" ${rq?"data-r=1":""}>${o.map(function(v){return`<option value="${v[0]==="_"?"":v}">${v[0]==="_"?v.slice(1):v}</option>`}).join("")}</select><span class="er"></span></div>`}
+function C(l,o,ty,x){var g="g"+(N++);return `<div class="f"><label>${l}</label><div class="opts">${o.map(function(v,k){return`<label class="o"><input id="${x?x+"_"+k:nid()}" type="${ty||"checkbox"}" name="${g}"><span style="color:var(--tx);font-size:15px">${v}</span></label>`}).join("")}</div></div>`}
+function mk(p,fn){P=p;N=0;return fn()}
+var SV=[["cv","CV professionnel (création et design)","Création complète sur mesure, design professionnel, 2 révisions incluses",120,150],["cv2","Version dans une 2e langue","Votre CV créé chez nous, traduit et adapté en anglais (ou en français)",60,60],["lm","Lettre de motivation personnalisée","Adaptée à votre offre, votre formation ou votre candidature",70,90],["email","Email de candidature spontanée","Message d’accroche et objet optimisé",40,60],["audit","Audit et correction de CV ou lettre existants","Analyse, conseils et correction de votre document actuel",70,90],["corr","Correction orthographique et grammaticale","Orthographe, grammaire, cohérence et style, par tranche de 10 pages",50,70],["mep10","Mise en page Word et PDF jusqu’à 10 pages","Titres, styles, numérotation et mise en forme propre",100,100],["mepR","Mise en page Word et PDF d’un rapport complet","Page de garde, sommaire automatique, numérotation, bibliographie",250,250],["ppt10","Présentation PowerPoint ou Canva jusqu’à 10 slides","Design professionnel et mise en forme de votre contenu",180,180],["ppt20","Présentation PowerPoint ou Canva de 10 à 20 slides","Soutenance, pitch : design professionnel et conseils d’oral",350,350]];
+var PK=[["candidat","Pack Candidat","CV professionnel + 2 lettres de motivation personnalisées",190,260],["bilingue","Pack Bilingue","CV en français + version anglaise + lettre de motivation",210,250],["express","Pack Express","Audit et correction de votre CV + lettre de motivation",120,140],["intl","Pack International","CV français + anglais + lettre en français + lettre en anglais",290,340],["rapport","Pack Rapport et Soutenance","Mise en page du rapport complet + correction (30 pages) + présentation 10 à 20 slides",650,750],["docpro","Pack Document Pro","Mise en page (10 pages) + correction (10 pages) + présentation jusqu’à 10 slides",285,330]];
+var MAP={cv:["cv"],cv2:["cv"],lm:["lm"],email:["lm"],audit:["corr"],corr:["corr"],trad:["trad"],mep10:["rap"],mepR:["rap"],ppt10:["ppt"],ppt20:["ppt"],autre:["autre"],candidat:["cv","lm"],bilingue:["cv","lm"],express:["corr","lm"],intl:["cv","lm"],rapport:["rap","corr","ppt"],docpro:["rap","corr","ppt"]};
+function card(id,t,d,pr,cl){return `<label class="o ${cl||""}" data-t="${t}"><input type="checkbox" id="sv_${id}"><div><b>${t}</b><span>${d}</span></div>${pr}</label>`}
+var LV=["_Choisir","Débutant (A1–A2)","Intermédiaire (B1–B2)","Avancé (C1)","Courant / langue maternelle (C2)"];
+function fo(i){return mk("fo"+i+"_",function(){return`<div class="blk" data-b="fo"><h4>Formation ${i}</h4>${T("Intitulé exact du diplôme","")}${T("Établissement")}${T("Ville et pays")}<div class="g2">${T("Année de début","","number")}${T("Année de fin","","number")}</div>${S("Statut",["_Choisir","Obtenu","En cours","Non obtenu"])}${T("Spécialité")}${T("Mention (si pertinente)")}</div>`})}
+function ex(i){return mk("ex"+i+"_",function(){return`<div class="blk" data-b="ex"><h4>Expérience ${i}</h4>${T("Intitulé du poste")}${T("Entreprise")}${T("Ville et pays")}<div class="g2">${T("Début (mois/année)")}${T("Fin (ou « en cours »)")}</div>${A("Missions et responsabilités","Décrivez ce que vous avez réellement fait")}${A("Résultats obtenus (si disponibles)")}</div>`})}
+var SEC={
+cv:mk("cv_",function(){return`<h3>CV : informations pour votre CV</h3>
+<div class="note">Indiquez uniquement des informations exactes : nous ne créons ni diplôme, ni expérience, ni compétence.</div>
+${T("E-mail professionnel à afficher")}${T("Lien LinkedIn ou portfolio (facultatif)","https://","url")}
+<h4>Objectif professionnel</h4>${T("Poste recherché")}${T("Domaine et secteur d’activité")}${T("Pays où vous souhaitez travailler")}${T("Entreprise visée (si applicable)")}${A("Offre d’emploi ciblée (collez l’annonce si disponible)")}
+<h4>Formation</h4><div id="fos"></div><button type="button" class="bl" id="afo">+ Ajouter une formation</button>
+<h4>Expériences professionnelles</h4>${C("",["Je n’ai aucune expérience professionnelle"],"checkbox","noex")}
+<div id="exw"><div id="exs"></div><button type="button" class="bl" id="aex">+ Ajouter une expérience</button></div>
+<div id="nxw" hidden>${A("Études et projets universitaires à valoriser")}${A("Stages")}${A("Bénévolat et activités associatives")}${A("Travaux personnels")}</div>
+<h4>Stages et projets</h4>${A("Intitulé, organisme d’accueil, durée, missions et compétences développées")}
+<h4>Compétences</h4>${A("Compétences techniques et professionnelles")}${A("Logiciels et outils informatiques maîtrisés")}${A("Langues et niveau réel dans chaque langue","Ex. Français : courant ; Anglais : B2")}${A("Certifications et formations complémentaires")}${T("Permis de conduire (si pertinent)")}${A("Centres d’intérêt pertinents")}
+<h4>Préférences</h4><div class="g2">${S("Langue du CV",["_Choisir","Français","Anglais","Les deux"])}${S("Style",["_Choisir","Classique","Moderne","Minimaliste","Créatif"])}${S("Photo",["_Choisir","Avec photo","Sans photo","À conseiller"])}${S("Longueur",["_Choisir","1 page","2 pages","À conseiller"])}</div>${A("Autres préférences (couleurs, exemples de CV appréciés…)")}`}),
+lm:mk("lm_",function(){return`<h3>Lettre de motivation / e-mail de candidature</h3>
+${T("Poste ou formation visé(e)")}${T("Entreprise ou établissement")}${T("Nom du destinataire (si connu)")}${T("Référence de l’offre (si applicable)")}
+${A("Annonce ou instructions (copiez-collez ici)")}${A("Vos motivations")}${A("Pourquoi cette entreprise ou cette formation ?")}${A("Compétences et expériences correspondant au poste")}${A("Qualités à valoriser")}${T("Votre disponibilité")}
+<div class="g2">${S("Langue souhaitée",["_Choisir","Français","Anglais"])}${S("Ton souhaité",["_Choisir","Sobre et professionnel","Dynamique","Chaleureux","Formel"])}</div>${A("Informations complémentaires")}`}),
+corr:mk("co_",function(){return`<h3>Audit et correction d’un document existant</h3>
+${A("Texte du document (collez-le ici) ou précisez que vous l’enverrez par WhatsApp")}
+${C("Type de correction souhaitée",["Orthographe","Grammaire","Syntaxe","Style","Clarté","Mise en page"])}
+${C("Contenu",["Conserver intégralement le contenu","Les reformulations sont autorisées","Style plus professionnel souhaité"])}
+${T("Nombre de pages à corriger (par tranche de 10 pages)","","number",0,"","pc")}`}),
+trad:mk("tr_",function(){return`<h3>Traduction de documents</h3><div class="note">La traduction d’un document n’a pas de tarif fixe au catalogue : le prix est confirmé après vérification du volume et de la difficulté.</div>
+<div class="g2">${T("Langue source")}${T("Langue cible")}</div>${T("Nature du document")}${A("Texte à traduire (ou précisez que vous l’enverrez par WhatsApp)")}${T("Public destinataire")}
+<div class="g2">${S("Ton souhaité",["_Choisir","Neutre","Professionnel","Académique","Soutenu"])}${S("Type de traduction",["_Choisir","Fidèle","Adaptation stylistique"])}</div>${A("Terminologie particulière à respecter")}${T("Nombre de pages ou de mots (estimation)")}`}),
+rap:mk("rp_",function(){return`<h3>Rapport de stage, mémoire, PFE ou document à mettre en page</h3>
+<div class="note">Vous fournissez les données et validez le contenu : nous n’inventons ni résultats, ni références bibliographiques.</div>
+${T("Intitulé exact du travail")}${T("Niveau d’études et filière")}${T("Établissement")}${T("Entreprise ou organisme d’accueil")}${A("Sujet et problématique")}${A("Objectifs du travail")}${A("Plan imposé (s’il existe)")}${A("Consignes officielles de l’établissement")}
+<div class="g2">${T("Nombre de pages souhaité")}${T("Normes de présentation","Police, marges, interligne…")}</div>${T("Style de citation ou bibliographie exigé","APA, ISO 690…")}
+${C("Parties déjà rédigées",["Introduction","Chapitres principaux","Conclusion","Bibliographie","Annexes"])}${A("Parties nécessitant une correction ou une mise en page")}${S("Format final",["_Choisir","Word","PDF","Word et PDF"])}`}),
+ppt:mk("pp_",function(){return`<h3>Présentation PowerPoint ou Canva</h3>
+${T("Sujet de la présentation")}${A("Contexte (soutenance, pitch, réunion…)")}<div class="g2">${T("Nombre de slides souhaité","","number")}${T("Durée de présentation prévue")}</div>${T("Public visé")}
+${C("Contenu fourni",["Texte déjà rédigé","Plan seulement","Images / logo / graphiques à intégrer","Rien encore"])}${A("Charte graphique, couleurs, modèle imposé")}${C("Options",["Conseils d’oral","Notes pour l’orateur"])}${A("Informations complémentaires")}`}),
+autre:mk("au_",function(){return`<h3>Autre demande documentaire</h3><div class="note">Nous vous confirmerons si la prestation est possible et son tarif avant toute commande.</div>${A("Décrivez précisément votre demande","",1)}`})
+};
+var TT={cv:"CV",lm:"Lettre / e-mail",corr:"Correction",trad:"Traduction",rap:"Rapport / mise en page",ppt:"Présentation",autre:"Autre"};
+function build(){
+var s1=mk("s1_",function(){return`<h2 data-h>Vos informations</h2><p class="lead">Seulement ce qui est utile à votre dossier.</p>
+<div class="g2">${T("Prénom","","text",1)}${T("Nom","","text",1)}</div>${T("Adresse e-mail","vous@exemple.com","email",1)}
+<div class="f"><label>Téléphone / WhatsApp *</label><div class="ph"><select id="ind"><option>+212</option><option>+33</option><option>+32</option><option>+41</option><option>+1</option><option>+213</option><option>+216</option><option>+221</option><option>+225</option><option>+44</option><option>Autre</option></select><input id="tel" type="tel" data-r=1 placeholder="6 12 34 56 78"></div><span class="er"></span></div>
+<div class="g2">${T("Ville de résidence","","text",1)}${T("Pays de résidence","","text",1)}</div>
+${S("Langue de communication préférée",["Français","Anglais","Arabe","Darija"])}${S("Statut actuel",["_Choisir","Étudiant","Jeune diplômé","Salarié","Demandeur d’emploi","Indépendant","Autre"],1)}${T("Disponibilité pour vos réponses à nos questions","Ex. soir après 18 h, week-end")}`});
+var cat=`<h2 data-h>Choix des services</h2><p class="lead">Catalogue et tarifs en vigueur de CANDIDIA 212 (en dirhams). Plusieurs choix possibles.</p><div class="f" id="svg"><label>Services à la carte *</label><div class="opts">`+
+SV.map(function(s){return card(s[0],s[1],s[2],`<em>${s[3]} DH<br>${s[4]===s[3]?"":s[4]+" DH EN"}</em>`)}).join("")+
+card("trad","Traduction d’un autre document","Tarif confirmé après vérification","<em>Sur devis</em>")+card("autre","Autre demande documentaire","À préciser, confirmée avant commande","<em>Sur devis</em>")+
+`</div></div><div class="f" id="pkg"><label>Packs avantageux</label><p class="lead" style="margin:0 0 8px">Le prix de chaque pack est celui du catalogue (français). Passer un élément en anglais : ajoutez la différence de prix.</p><div class="opts">`+
+PK.map(function(p){return card(p[0],p[1],p[2],`<em>${p[3]} DH<br><s style="font-weight:400;opacity:.7">${p[4]} DH</s></em>`,"pk")}).join("")+
+`</div></div><span class="er" id="e2"></span>`;
+var s3=mk("s3_",function(){return`<h2 data-h>Votre projet</h2><p class="lead">Les informations communes à tous vos documents.</p>
+${T("Objectif du document","Ex. décrocher un stage en marketing","text",1)}${T("À qui est-il destiné ?")}${A("Contexte de la demande")}${A("Expliquez librement votre demande","Tout ce qui nous aidera à bien comprendre votre besoin")}
+<div class="g2">${S("Langue du document final",["_Choisir","Français","Anglais","Autre (à confirmer)"],1,"dl")}${S("Niveau de langue",["_Choisir","Simple","Professionnel","Académique","Soutenu"])}${S("Format souhaité",["_Choisir","Word","PDF","PowerPoint","Word et PDF","Autre"],1)}${T("Date limite souhaitée","","date",0,"","dd")}</div>
+${C("Point de départ",["Création à partir de zéro","J’ai déjà un document à corriger ou améliorer"],"radio")}${A("Modèle, structure ou consignes à respecter")}
+${C("Délai",["Livraison express (+ 30 % sur le prix du service, livraison prioritaire)"],"checkbox","ex")}${A("Informations complémentaires utiles")}`});
+var secs=Object.keys(SEC).map(function(k){return`<div class="sec" data-k="${k}" hidden>${SEC[k]}</div>`}).join("");
+var s5=`<h2 data-h>Récapitulatif</h2><p class="lead">Vérifiez vos informations avant l’envoi.</p><div id="rc"></div>
+<div class="f" id="cf"><label class="o"><input type="checkbox" id="cs"><span style="color:var(--tx);font-size:14.5px">Je confirme que les informations fournies sont exactes et que le contenu final reste le mien. J’ai pris connaissance des conditions : 2 révisions incluses (puis 20 DH par révision), acompte de 50 % à la commande au-delà de 500 DH, solde à la livraison.</span></label><span class="er"></span></div>`;
+var h=[s1,cat,s3,`<h2 data-h>Détails par service</h2><p class="lead">Seules les questions liées à vos choix s’affichent.</p>`+secs+`<div id="nos" class="note" hidden>Choisissez au moins un service à l’étape 2.</div>`,s5];
+$("#form").innerHTML=h.map(function(x,i){return`<section class="step" data-n="${i}">${x}<div class="nav">${i?`<button type="button" class="bs" data-go="-1">← Retour</button>`:"<span></span>"}<button type="button" class="bp" data-go="1">${i==4?"Valider mon dossier":"Continuer →"}</button></div></section>`}).join("")+`<section class="step" id="done"></section>`;
+$("#pg").innerHTML=ST.map(function(){return"<i></i>"}).join("");
+}
+var cur=0;
+function secVis(){var ks={};$$("[id^=sv_]").forEach(function(i){if(i.checked)(MAP[i.id.slice(3)]||[]).forEach(function(k){ks[k]=1})});
+$$(".sec").forEach(function(e){e.hidden=!ks[e.dataset.k]});$("#nos").hidden=!!Object.keys(ks).length}
+function show(n){cur=n;$$(".step").forEach(function(e){e.classList.toggle("cur",+e.dataset.n===n)});
+$$("#pg i").forEach(function(e,i){e.className=i<n?"d":i==n?"c":""});$("#pt").textContent="Étape "+(n+1)+" sur 5";$("#pc2").textContent=ST[n];
+if(n==3)secVis();if(n==4)$("#rc").innerHTML=recap();scrollTo(0,0)}
+function bad(f,m){f=f.closest(".f");f.classList.add("bad");var e=f.querySelector(".er");if(e)e.textContent=m}
+function valid(n){var ok=true;$$(".bad").forEach(function(f){f.classList.remove("bad");var e=f.querySelector(".er");if(e)e.textContent=""});$("#e2").textContent="";
+var st=$(`.step[data-n="${n}"]`);$$("[data-r]",st).forEach(function(i){if(i.closest("[hidden]"))return;var v=i.value.trim();
+if(!v){bad(i,"Ce champ est obligatoire.");ok=false}else if(i.type=="email"&&!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(v)){bad(i,"Saisissez une adresse e-mail valide (ex. nom@exemple.com).");ok=false}
+else if(i.id=="tel"&&v.replace(/\D/g,"").length<7){bad(i,"Saisissez un numéro de téléphone valide.");ok=false}});
+if(n==1&&!$$("[id^=sv_]").some(function(i){return i.checked})){$("#e2").textContent="Sélectionnez au moins un service ou un pack pour continuer.";ok=false}
+if(n==4&&!$("#cs").checked){bad($("#cs"),"Veuillez accepter pour valider votre dossier.");ok=false}
+if(!ok){var b=$(".bad",st)||$("#e2");if(b)b.scrollIntoView({block:"center"})}return ok}
+function sel(){return $$("[id^=sv_]").filter(function(i){return i.checked}).map(function(i){return i.id.slice(3)})}
+function est(){var en=$("#dl").value==="Anglais",t=0,tbc=[],ids=sel();
+ids.forEach(function(id){var s=SV.filter(function(x){return x[0]==id})[0],p=PK.filter(function(x){return x[0]==id})[0];
+if(s){var u=en?s[4]:s[3];if(id=="corr"&&$("#pc").value)u*=Math.max(1,Math.ceil(+$("#pc").value/10));t+=u}else if(p)t+=p[3];else tbc.push(id=="trad"?"Traduction":"Autre demande")});
+var ex=$("#ex_0")||$$("#form input").filter(function(i){return i.closest(".f")&&/Livraison express/.test(i.closest("label").textContent)})[0];
+var x=ex&&ex.checked;if(x)t=Math.round(t*1.3);return{t:t,tbc:tbc,x:x,ac:t>500}}
+function lab(e){return e.firstElementChild.textContent.replace(/\s\*$/,"").trim()}
+function collect(){var o=[];$$("#form h2[data-h],#form h3,#form h4,#form .f").forEach(function(e){if(e.closest("[hidden]")||e.closest("#done")||e.closest("#cf"))return;
+if(/^H/.test(e.tagName)){o.push("\n"+(e.tagName=="H2"?"== ":"-- ")+e.textContent.toUpperCase());return}
+var ins=$$("input[type=checkbox],input[type=radio]",e),v;
+if(ins.length)v=ins.filter(function(i){return i.checked}).map(function(i){var l=i.closest("label");return l.dataset.t||l.textContent.trim()}).join(" ; ");
+else v=$$("input,select,textarea",e).map(function(c){return c.value.trim()}).filter(Boolean).join(" ");
+var L=e.id=="svg"||e.id=="pkg"||!e.firstElementChild||!e.firstElementChild.matches("label")?(e.id=="pkg"?"Packs":e.id=="svg"?"Services":""):lab(e);
+if(!v||!L&&!v)return;if(e.id=="pkg"&&!v)return;o.push((L?L+" : ":"")+v)});return o.join("\n")}
+function recap(){var e=est(),ids=sel(),n=ids.map(function(i){var a=SV.concat(PK).filter(function(x){return x[0]==i})[0];return a?a[1]:i=="trad"?"Traduction d’un autre document":"Autre demande"});
+return`<p><b>Services choisis :</b><br>${n.join("<br>")}</p><div class="est">Estimation indicative<br><b>${e.t} DH</b>${e.x?" (express inclus)":""}${e.tbc.length?`<br><small>+ ${e.tbc.join(", ")} : tarif à confirmer</small>`:""}${e.ac?`<br><small>Acompte de 50 % à la commande : ${Math.round(e.t/2)} DH</small>`:""}<br><small>Estimation basée sur le catalogue ; CANDIDIA 212 confirme le prix et la faisabilité avant toute commande.</small></div><details><summary>Voir toutes mes réponses</summary><pre>${collect().replace(/</g,"&lt;")}</pre></details>`}
+var KEY="COLLEZ_VOTRE_CLE_ICI";
+function cpy(btn,txt){var ok=function(){btn.textContent="Dossier copié ✓"};
+try{navigator.clipboard.writeText(txt).then(ok,function(){fb()})}catch(x){fb()}function fb(){var t=document.createElement("textarea");t.value=txt;document.body.appendChild(t);t.select();try{document.execCommand("copy");ok()}catch(x){btn.textContent="Sélectionnez le texte ci-dessous"}t.remove()}}
+function finish(){var r="CAND-"+new Date().toISOString().slice(2,10).replace(/-/g,"")+"-"+Math.random().toString(36).slice(2,6).toUpperCase(),e=est(),
+txt=`DOSSIER CLIENT CANDIDIA 212\nRéférence : ${r}\n`+collect()+`\n\n== ESTIMATION\n${e.t} DH${e.tbc.length?" + à confirmer : "+e.tbc.join(", "):""}${e.ac?" (acompte 50 % : "+Math.round(e.t/2)+" DH)":""}`;
+var enc=encodeURIComponent(txt),wa="https://wa.me/"+WA+"?text="+(enc.length<5500?enc:encodeURIComponent("Bonjour CANDIDIA 212, voici mon dossier client, référence "+r+".")),
+wa2="https://wa.me/"+WA+"?text="+encodeURIComponent("Bonjour CANDIDIA 212, je viens d’envoyer mon dossier client, référence "+r+". Je vous envoie mes fichiers ici."),
+nm=($("#s1_0").value+" "+$("#s1_1").value).trim(),em=$("#s1_2").value.trim(),ph=$("#ind").value+" "+$("#tel").value.trim(),
+LK='style="padding:14px;border-radius:12px;font-weight:700"';
+$$(".step").forEach(function(s){s.classList.remove("cur")});var d=$("#done");d.classList.add("cur");$("#pg").hidden=$("#pl").hidden=true;scrollTo(0,0);
+function okV(){d.innerHTML=`<div class="ok"><div class="ck">✓</div><h2>Votre dossier a bien été envoyé</h2><p class="lead">Référence <b>${r}</b><br>Nous l’étudions et nous vous répondons avec la confirmation du tarif et du délai.</p>
+<div class="nav"><a class="bp" ${LK} href="${wa2}" target="_blank" rel="noopener">Envoyer mes fichiers sur WhatsApp</a></div>
+<p style="font-size:14px;color:var(--mu)">Si vous avez des documents à nous transmettre (CV actuel, annonce, consignes, documents à corriger ou à traduire), joignez-les dans la conversation WhatsApp.</p>
+<details style="text-align:left"><summary>Voir le dossier envoyé</summary><pre>${txt.replace(/</g,"&lt;")}</pre></details></div>`;try{localStorage.removeItem("c212")}catch(x){}}
+function erV(){d.innerHTML=`<div class="ok"><div class="ck" style="background:var(--er);color:#fff">!</div><h2>L’envoi automatique a échoué</h2><p class="lead">Vos réponses sont conservées sur cet appareil. Vous pouvez réessayer, ou nous envoyer votre dossier sur WhatsApp.</p>
+<div class="nav"><button type="button" class="bp" id="rt">Réessayer l’envoi</button><a class="bs" ${LK} href="${wa}" target="_blank" rel="noopener">Envoyer mon dossier sur WhatsApp</a><button type="button" class="bs" id="cp">Copier mon dossier</button></div></div>`;
+$("#rt").onclick=send;$("#cp").onclick=function(){cpy(this,txt)}}
+function send(){d.innerHTML='<div class="ok"><h2>Envoi en cours…</h2><p class="lead">Veuillez patienter quelques secondes.</p></div>';
+if(KEY.indexOf("COLLEZ")==0){erV();return}
+fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({access_key:KEY,subject:"Nouveau dossier client CANDIDIA 212 – "+r+" – "+nm,from_name:"CANDIDIA 212 – Formulaire client",name:nm,email:em,phone:ph,message:txt,botcheck:""})})
+.then(function(x){return x.json()}).then(function(j){if(!j.success)throw 0;okV()}).catch(erV)}
+send()}
+function save(){try{var v={};$$("#form input,#form select,#form textarea").forEach(function(i){if(i.id)v[i.id]=i.type=="checkbox"||i.type=="radio"?i.checked:i.value});
+localStorage.setItem("c212",JSON.stringify({v:v,fo:$$("[data-b=fo]").length,ex:$$("[data-b=ex]").length,s:cur}))}catch(x){}}
+function addB(k,fn,c){var w=$("#"+k+"s");w.insertAdjacentHTML("beforeend",fn(w.children.length+1))}
+function wire(){addB("fo",fo);addB("ex",ex);
+$("#afo").onclick=function(){addB("fo",fo);save()};$("#aex").onclick=function(){addB("ex",ex);save()};
+var no=$("#noex_0");if(no)no.onchange=function(){$("#exw").hidden=no.checked;$("#nxw").hidden=!no.checked}}
+build();wire();
+var dd=$("#dd");if(dd)dd.min=new Date().toISOString().slice(0,10);
+try{var sv=JSON.parse(localStorage.getItem("c212")||"null");if(sv){for(var a=1;a<sv.fo;a++)addB("fo",fo);for(var b=1;b<sv.ex;b++)addB("ex",ex);
+Object.keys(sv.v).forEach(function(k){var e=document.getElementById(k);if(!e)return;if(e.type=="checkbox"||e.type=="radio")e.checked=sv.v[k];else e.value=sv.v[k]});
+var no=$("#noex_0");if(no&&no.checked){$("#exw").hidden=true;$("#nxw").hidden=false}cur=Math.min(sv.s||0,4)}}catch(x){}
+$("#form").addEventListener("input",save);$("#form").addEventListener("change",save);
+$("#form").addEventListener("click",function(e){var b=e.target.closest("[data-go]");if(!b)return;var d=+b.dataset.go;
+if(d>0){if(!valid(cur))return;if(cur==4){finish();return}}show(cur+d);save()});
+$("#form").addEventListener("submit",function(e){e.preventDefault()});
+show(cur);
+</script>
+</body>
+</html>
